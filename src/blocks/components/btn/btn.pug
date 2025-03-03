@@ -1,0 +1,22 @@
+-
+    const defaultBtnProps = {
+        classes: '',
+        tag: 'button',
+        buttonType: 'button',
+        text: 'Кнопка',
+        cMode: ''
+    }
+
+mixin btn(props = defaultBtnProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultBtnProps.classes,
+            tag: props.tag ? props.tag : defaultBtnProps.tag,
+            buttonType: props.buttonType ? props.buttonType : defaultBtnProps.buttonType,
+            text: props.text ? props.text : defaultBtnProps.text,
+            cMode: props.cMode ? props.cMode : defaultBtnProps.cMode,
+        }
+
+        let cModeClass = checkProps.cMode.length > 0 ? ` btn--${checkProps.cMode}` : ''
+
+    button.btn(class=checkProps.classes + cModeClass type=checkProps.buttonType)&attributes(attributes)!= checkProps.text

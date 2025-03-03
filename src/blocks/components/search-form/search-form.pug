@@ -1,0 +1,29 @@
+-
+    const defaultSearchFormProps = {
+        classes: '',
+        btnCMode: ''
+    }
+
+mixin search-form(props = defaultTitleProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultTitleProps.classes,
+            btnCMode: props.btnCMode ? props.btnCMode : defaultTitleProps.btnCMode
+        }
+
+    form.search-form(class=checkProps.classes data-js="searchForm")&attributes(attributes)
+        .search-form__main
+            .search-form__field
+                input.search-form__input(type='text' placeholder='Искать в энциклопедии' data-js="searchFormInput")
+                button.search-form__search(type="submit")
+                    svg 
+                        use(xlink:href=`img/sprites/sprite.svg#search`)
+
+            +btn({
+                classes: 'search-form__submit',
+                text: 'Найти',
+                buttonType: 'submit',
+                cMode: checkProps.btnCMode,
+            })
+        .search-form__footer
+            .search-form__note(data-js="searchFormNote") К сожалению, ничего не нашлось

@@ -1,0 +1,75 @@
+.site-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: $c-white;
+
+    &__container {
+        width: 100%;
+        max-width: 1088px;
+        margin: 0 auto;
+        padding: 0 16px 0 0;
+        display: flex;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    &__burger {
+        width: 56px;
+        height: 56px;
+        align-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: color $tr-time linear;
+
+        &:hover {
+            color: $c-accent;
+        }
+
+        svg {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    &__logo {
+        width: 147px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &__item {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.4em;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 8px;
+        transition: color $tr-time linear;
+
+        &:hover,
+        &.active {
+            color: $c-accent;
+        }
+
+    }
+}

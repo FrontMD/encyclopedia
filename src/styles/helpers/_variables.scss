@@ -1,0 +1,30 @@
+:root {
+    --c-accent: #01BE84;
+    --c-text: #222;
+}
+
+// шрифты
+$ff-pt: "PT Serif Caption", "Georgia", serif;
+$ff-main: "Inter", "Georgia", serif;
+$ff-second: "Raleway", "Georgia", serif;
+
+// media
+$media-list: (
+    'xs': 500,
+    'mobile': 767,
+    'tablet': 1023,
+    'laptop': 1420,
+    'large': 1800,
+);
+
+// Цвета
+$c-white: #fff;
+$c-black: #000;
+$c-accent: var(--c-accent);
+$c-text: var(--c-text);
+$c-text-grey: #808080;
+$c-text-placeholder: #ABABAB;
+$c-border: #ccc;
+
+// переходы
+$tr-time: .3s;

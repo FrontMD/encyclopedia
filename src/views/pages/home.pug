@@ -1,0 +1,25 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Главная"
+
+block content
+	.page-layout
+		section.section.home-intro
+			.home-intro__bg
+				img(src="img/home/home_intro.webp")
+			.section__container.home-intro__container
+				+title({
+					classes: 'home-intro__title',
+					text: 'ЭНЦИКЛОПЕДИЯ ЗАБАЙКАЛЬЯ',
+					cMode: 'light',
+					tag: 'h1',
+				})
+				+search-form({
+					classes: 'home-intro__search',
+					btnCMode: 'gradient'
+				})
+
+		section.section.home-news
+			.section__container
