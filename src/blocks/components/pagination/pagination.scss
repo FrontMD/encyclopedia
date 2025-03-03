@@ -1,0 +1,116 @@
+.pagination {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 32px;
+
+    @include max(mobile) {
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    &__page {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 43px;
+        height: 48px;
+        background-color: $c-white;
+        border-radius: 8px;
+        color: $c-accent;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.5em;
+        transition: all $tr-time linear;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+
+        @include max(mobile) {
+            width: 30px;
+            height: 30px;
+            font-size: 12px;
+        }
+
+        &.active {
+            background-color: $c-bg-grey;
+            color: $c-text;
+        }
+
+        &:hover {
+            color: $c-accent-hover;
+        }
+    }
+
+    &__btn {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        background-color: $c-bg-grey;
+        border-radius: 8px;
+        color: $c-text;
+        padding: 0;
+
+        @include max(mobile) {
+            width: 30px;
+            height: 30px;
+        }
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        &.active {
+            display: flex;
+        }
+
+        &:hover {
+            color: $c-accent;
+        }
+    }
+
+    &__btn--next {
+        transform: rotate(-90deg);
+        margin: 0 0 0 11px;
+
+        @include max(mobile) {
+            margin: 0 0 0 8px;
+        }
+    }
+
+    &__btn--prev {
+        transform: rotate(90deg);
+        margin: 0 11px 0 0;
+
+        @include max(mobile) {
+            margin: 0 8px 0 0;
+        }
+    }
+
+    &__separator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 48px;
+        background-color: $c-white;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.4em;
+        color: $c-text;
+
+        @include max(mobile) {
+            width: 30px;
+            height: 30px;
+            font-size: 12px;
+        }
+    }
+}

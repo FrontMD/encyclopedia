@@ -4,6 +4,8 @@
     top: 0;
     width: 100%;
     background-color: $c-white;
+    z-index: 20;
+    border-bottom: 1px solid $c-bg-grey;
 
     &__container {
         width: 100%;

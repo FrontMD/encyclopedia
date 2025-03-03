@@ -38,6 +38,7 @@
 
     &__title {
         font-family: $ff-pt;
+        line-height: 1em;
         margin-top: 147px;
     }
 
@@ -47,4 +48,13 @@
     }
 }
 
-.home-news {}
+.home-news {
+    padding-top: 32px;
+
+    &__list {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+    }
+}

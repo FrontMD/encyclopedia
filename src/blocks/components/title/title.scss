@@ -1,7 +1,12 @@
 .title {
     color: $c-text;
     font-weight: 700;
+    line-height: 1.33em;
     font-family: $ff-main;
+
+    span {
+        color: $c-accent;
+    }
 
     &--light {
         color: $c-white;
@@ -23,7 +28,6 @@
 
     &--41 {
         font-size: 41.27px;
-        line-height: 1em;
 
         @include max(laptop) {
             font-size: 67px;
@@ -40,7 +44,6 @@
 
     &--30 {
         font-size: 30px;
-        line-height: 1em;
 
         @include max(laptop) {
             font-size: 53px;
@@ -53,15 +56,10 @@
         @include max(xs) {
             font-size: 32px;
         }
-
-        @media print {
-            font-size: 38pt;
-        }
     }
 
     &--20 {
         font-size: 20px;
-        line-height: 1em;
 
         @include max(laptop) {
             font-size: 40px;
