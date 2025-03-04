@@ -9,8 +9,23 @@
     margin-top: 32px;
 
     @include max(mobile) {
-        justify-content: center;
-        margin-top: 40px;
+        margin-top: 24px;
+    }
+
+    @include max(xs) {
+        justify-content: space-between;
+    }
+
+    &__text {
+        display: none;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.5em;
+        color: #111;
+
+        @include max(xs) {
+            display: block;
+        }
     }
 
     &__page {
@@ -30,12 +45,6 @@
         margin: 0;
         padding: 0;
 
-        @include max(mobile) {
-            width: 30px;
-            height: 30px;
-            font-size: 12px;
-        }
-
         &.active {
             background-color: $c-bg-grey;
             color: $c-text;
@@ -43,6 +52,10 @@
 
         &:hover {
             color: $c-accent-hover;
+        }
+
+        @include max(xs) {
+            display: none;
         }
     }
 
@@ -56,19 +69,22 @@
         border-radius: 8px;
         color: $c-text;
         padding: 0;
-
-        @include max(mobile) {
-            width: 30px;
-            height: 30px;
-        }
+        opacity: 0.48;
+        pointer-events: none;
 
         svg {
-            width: 16px;
-            height: 16px;
+            width: 24px;
+            height: 24px;
+        }
+
+        @include max(xs) {
+            display: flex;
         }
 
         &.active {
             display: flex;
+            opacity: 1;
+            pointer-events: auto;
         }
 
         &:hover {
@@ -77,21 +93,12 @@
     }
 
     &__btn--next {
-        transform: rotate(-90deg);
         margin: 0 0 0 11px;
-
-        @include max(mobile) {
-            margin: 0 0 0 8px;
-        }
     }
 
     &__btn--prev {
-        transform: rotate(90deg);
+        transform: rotate(-180deg);
         margin: 0 11px 0 0;
-
-        @include max(mobile) {
-            margin: 0 8px 0 0;
-        }
     }
 
     &__separator {
@@ -105,12 +112,10 @@
         font-size: 16px;
         font-weight: 700;
         line-height: 1.4em;
-        color: $c-text;
+        color: $c-text-placeholder;
 
-        @include max(mobile) {
-            width: 30px;
-            height: 30px;
-            font-size: 12px;
+        @include max(xs) {
+            display: none;
         }
     }
 }

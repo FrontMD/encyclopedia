@@ -1,7 +1,11 @@
 .sidebar-events {
-    padding: 24px;
+    padding: 23px;
     border: 1px solid $c-border;
     border-radius: 16px;
+
+    @include max(tablet) {
+        margin-top: 24px;
+    }
 
     &__items {
         margin-top: 20px;

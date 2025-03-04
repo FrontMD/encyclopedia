@@ -4,7 +4,8 @@
         tag: 'button',
         buttonType: 'button',
         text: 'Кнопка',
-        cMode: ''
+        cMode: '',
+        icon: ''
     }
 
 mixin btn(props = defaultBtnProps)
@@ -15,8 +16,15 @@ mixin btn(props = defaultBtnProps)
             buttonType: props.buttonType ? props.buttonType : defaultBtnProps.buttonType,
             text: props.text ? props.text : defaultBtnProps.text,
             cMode: props.cMode ? props.cMode : defaultBtnProps.cMode,
+            icon: props.icon ? props.icon : defaultBtnProps.icon,
         }
 
         let cModeClass = checkProps.cMode.length > 0 ? ` btn--${checkProps.cMode}` : ''
 
-    button.btn(class=checkProps.classes + cModeClass type=checkProps.buttonType)&attributes(attributes)!= checkProps.text
+    button.btn(class=checkProps.classes + cModeClass type=checkProps.buttonType)&attributes(attributes)
+        - if(checkProps.text.length > 0)
+            .btn__text!= checkProps.text
+        - if(checkProps.icon.length > 0)
+            .btn__icon
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#${checkProps.icon}`)

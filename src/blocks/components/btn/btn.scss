@@ -12,8 +12,35 @@
     color: $c-text;
     transition: all $tr-time linear;
 
+    @include max(xs) {
+        padding: 12px;
+    }
+
     &:hover {
         color: $c-accent;
+    }
+
+    &__icon {
+        display: none;
+        width: 24px;
+        height: 24px;
+
+        @include max(xs) {
+            display: block;
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__text {
+        display: block;
+
+        @include max(xs) {
+            display: none;
+        }
     }
 
     &--gradient {

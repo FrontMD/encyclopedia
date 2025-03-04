@@ -17,17 +17,18 @@ mixin pagination(props = defaultPaginationProps)
             svg
                 use(xlink:href=`img/sprites/sprite.svg#arrow_angle`)
         - let i = 1
-            -if(checkProps.separator === true)
-                while i <= checkProps.count
-                    -if(i < 4 || i == checkProps.count)
-                        a.pagination__page(href="javascript:void(0);" class= i===1 ? "active" : "")= i
-                    -if(i == 4)
-                        .pagination__separator ...
-                    - i++
-            - else
-                while i <= checkProps.count
+        -if(checkProps.separator === true)
+            while i <= checkProps.count
+                -if(i < 6 || i == checkProps.count)
                     a.pagination__page(href="javascript:void(0);" class= i===1 ? "active" : "")= i
-                    - i++
+                -if(i == 6)
+                    .pagination__separator ...
+                - i++
+        - else
+            while i <= checkProps.count
+                a.pagination__page(href="javascript:void(0);" class= i===1 ? "active" : "")= i
+                - i++
+        .pagination__text 1 из 90
         a.pagination__btn.active.pagination__btn--next(href="javascript:void(0);")
             svg
                 use(xlink:href=`img/sprites/sprite.svg#arrow_angle`)

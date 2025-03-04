@@ -33,55 +33,6 @@ block content
             }
         }
 
-        .pages-list__link:after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-            font-size: 14px;
-            line-height: 1.02em;
-            padding: 5px 10px;
-            border-radius: 3px;
-            width: fit-content;
-        }
-
-        .pages-list__link--check {
-            padding-right: 155px;
-        }
-
-        .pages-list__link--check:after {
-            content: "проверка / правки";
-            background-color: #ffffcc;
-            color: #ff6a00;
-        }
-
-
-        .pages-list__link--postponed:after {
-            content: "отложено / очередь";
-            background-color: #dedede;
-            color: #212121;
-        }
-
-        .pages-list__link--work {
-            padding-right: 85px;
-        }
-
-        .pages-list__link--work:after {
-            content: "в работе";
-            background-color: #9FC5F8;
-            color: #000044;
-        }
-
-        .pages-list__link--ready {
-            padding-right: 85px;
-        }
-
-        .pages-list__link--ready:after {
-            content: "натяжка";
-            background-color: #93C47D;
-            color: #04412B;
-        }
-
         .pages-list__link:hover {
             color: var(--c-accent);
         }
@@ -90,11 +41,6 @@ block content
             .pages-list__link {
                 padding-right: 0;
                 padding-top: 30px;
-            }
-
-            .pages-list__link:after {
-                left: 0;
-                right: auto;
             }
         }
 
@@ -136,4 +82,5 @@ block content
                 })
 
                 .pages-list__links
-                    a.pages-list__link.pages-list__link--work(href="home.html" target="_blank") Главная
+                    a.pages-list__link(href="home.html" target="_blank") Главная
+                    a.pages-list__link(href="home.html" target="_blank") О проекте - Об Энциклопедии

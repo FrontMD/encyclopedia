@@ -1,8 +1,10 @@
-header.site-header
+header.site-header(data-js="siteHeader")
 	.site-header__container
-		.site-header__burger(data-js="headerBurger")
-			svg 
+		.site-header__burger(data-js="siteHeaderBurgerBtn")
+			svg.open
 				use(xlink:href=`img/sprites/sprite.svg#burger`)
+			svg.close
+				use(xlink:href=`img/sprites/sprite.svg#close`)
 		.site-header__logo
 			a(href="javascript:void(0);") 
 				img(src="img/logo.svg" alt="логотип Энциклопедия Забайкалья")
@@ -12,3 +14,14 @@ header.site-header
 					a(href="javascript:void(0);") О проекте
 				li.nav-menu__item
 					a(href="javascript:void(0);") Энциклопедия
+
+	.site-header__submenu.burger(data-js="siteHeaderBurger")
+		.burger__container
+			.burger-menu
+				a.burger-menu__item(href="javascript:void(0);") О проекте
+				a.burger-menu__item(href="javascript:void(0);") Энциклопедия Забайкалья
+				a.burger-menu__item(href="javascript:void(0);") Малая ЭЗ
+				a.burger-menu__item(href="javascript:void(0);") Библиотека ЭЗ
+				a.burger-menu__item(href="javascript:void(0);") Альбомная серия ЭЗ
+				a.burger-menu__item(href="javascript:void(0);") Избранные труды
+				a.burger-menu__item(href="javascript:void(0);") Еще

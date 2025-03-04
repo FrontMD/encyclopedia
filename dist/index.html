@@ -26,11 +26,14 @@
     <link rel="stylesheet" href="styles/main.min.css">
   </head>
   <body>
-    <header class="site-header">
+    <header class="site-header" data-js="siteHeader">
       <div class="site-header__container">
-        <div class="site-header__burger" data-js="headerBurger">
-          <svg> 
+        <div class="site-header__burger" data-js="siteHeaderBurgerBtn">
+          <svg class="open">
             <use xlink:href="img/sprites/sprite.svg#burger"></use>
+          </svg>
+          <svg class="close">
+            <use xlink:href="img/sprites/sprite.svg#close"></use>
           </svg>
         </div>
         <div class="site-header__logo"><a href="javascript:void(0);"> <img src="img/logo.svg" alt="логотип Энциклопедия Забайкалья"></a></div>
@@ -40,6 +43,11 @@
             <li class="nav-menu__item"><a href="javascript:void(0);">Энциклопедия</a></li>
           </ul>
         </nav>
+      </div>
+      <div class="site-header__submenu burger" data-js="siteHeaderBurger">
+        <div class="burger__container">
+          <div class="burger-menu"><a class="burger-menu__item" href="javascript:void(0);">О проекте</a><a class="burger-menu__item" href="javascript:void(0);">Энциклопедия Забайкалья</a><a class="burger-menu__item" href="javascript:void(0);">Малая ЭЗ</a><a class="burger-menu__item" href="javascript:void(0);">Библиотека ЭЗ</a><a class="burger-menu__item" href="javascript:void(0);">Альбомная серия ЭЗ</a><a class="burger-menu__item" href="javascript:void(0);">Избранные труды</a><a class="burger-menu__item" href="javascript:void(0);">Еще</a></div>
+        </div>
       </div>
     </header>
     <main class="site-main">
@@ -71,55 +79,6 @@
             }
         }
         
-        .pages-list__link:after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-            font-size: 14px;
-            line-height: 1.02em;
-            padding: 5px 10px;
-            border-radius: 3px;
-            width: fit-content;
-        }
-        
-        .pages-list__link--check {
-            padding-right: 155px;
-        }
-        
-        .pages-list__link--check:after {
-            content: "проверка / правки";
-            background-color: #ffffcc;
-            color: #ff6a00;
-        }
-        
-        
-        .pages-list__link--postponed:after {
-            content: "отложено / очередь";
-            background-color: #dedede;
-            color: #212121;
-        }
-        
-        .pages-list__link--work {
-            padding-right: 85px;
-        }
-        
-        .pages-list__link--work:after {
-            content: "в работе";
-            background-color: #9FC5F8;
-            color: #000044;
-        }
-        
-        .pages-list__link--ready {
-            padding-right: 85px;
-        }
-        
-        .pages-list__link--ready:after {
-            content: "натяжка";
-            background-color: #93C47D;
-            color: #04412B;
-        }
-        
         .pages-list__link:hover {
             color: var(--c-accent);
         }
@@ -128,11 +87,6 @@
             .pages-list__link {
                 padding-right: 0;
                 padding-top: 30px;
-            }
-        
-            .pages-list__link:after {
-                left: 0;
-                right: auto;
             }
         }
         
@@ -171,12 +125,29 @@
                 <div class="title pages-list__title title--41 title--dark">
                   <h1>Страницы</h1>
                 </div>
-            <div class="pages-list__links"><a class="pages-list__link pages-list__link--work" href="home.html" target="_blank">Главная</a></div>
+            <div class="pages-list__links"><a class="pages-list__link" href="home.html" target="_blank">Главная</a><a class="pages-list__link" href="home.html" target="_blank">О проекте - Об Энциклопедии</a></div>
           </div>
         </section>
       </div>
     </main>
-    <footer class="site-footer"> footer</footer>
+    <footer class="site-footer">
+      <div class="site-footer__container">
+        <ul class="nav-menu nav-menu--footer">
+          <li class="nav-menu__item"><a href="javascript:void(0);">О проекте</a></li>
+          <li class="nav-menu__item"><a href="javascript:void(0);">Энциклопедия</a></li>
+        </ul><a class="site-footer__logo" href="javascript:void(0);"><img src="img/holding_logo.svg"></a>
+        <div class="site-footer__text">
+          <p>Сетевое издание </p>
+          <p>Регистрационный номер ЭЛ № ФС 77 - 83698</p>
+          <p>Зарегистрировано Федеральной службой по надзору в сфере связи, информационных технологий и массовых, коммуникаций (Роскомнадзор) 26.07.2022 18+</p>
+          <p>Учредитель: Общество с ограниченной ответственностью «Шкулёв Диджитал Технологии»</p>
+          <p>Главный редактор: Ананьина А. Ю.</p>
+          <p>Контактные данные для государственных органов (в том числе, для Роскомнадзора):</p>
+          <p>Эл. почта: <a href="mailto:starhit.ru_legal@sholding.ru">starhit.ru_legal@sholding.ru</a> телефон: <a href="tel:+74956335633">+7(495) 633-5-633</a></p>
+          <p>Copyright (с) ООО «Шкулёв Диджитал Технологии», 2024. Любое воспроизведение материалов сайта без разрешения редакции воспрещается.</p>
+        </div>
+      </div>
+    </footer>
     <script src="js/main.min.js"></script>
   </body>
 </html>

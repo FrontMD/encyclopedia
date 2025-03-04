@@ -18,12 +18,22 @@ mixin search-form(props = defaultTitleProps)
                 button.search-form__search(type="submit")
                     svg 
                         use(xlink:href=`img/sprites/sprite.svg#search`)
+                .search-form__results(data-js="searchFormResults")
+                    .search-form__prompts
+                        a.search-form__prompt(href="javascript:void(0)") Чита, ж.д. узел
+                        a.search-form__prompt(href="javascript:void(0)") Чита, река
+                        a.search-form__prompt(href="javascript:void(0)") Чита - Забайкальск А-166
+                        a.search-form__prompt(href="javascript:void(0)") Гимназия № 4 г. Чита
+                        a.search-form__prompt(href="javascript:void(0)") Верх-Чита
+
+                    a.search-form__all(href="javascript:void(0)") Показать все результаты
 
             +btn({
                 classes: 'search-form__submit',
                 text: 'Найти',
                 buttonType: 'submit',
                 cMode: checkProps.btnCMode,
+                icon: 'arrow_classic'
             })
         .search-form__footer
             .search-form__note(data-js="searchFormNote") К сожалению, ничего не нашлось

@@ -1,0 +1,115 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Главная"
+
+block content
+	.page-layout
+		section.section.home-intro
+			.home-intro__bg
+				img(src="img/home/home_intro.webp")
+			.section__container.home-intro__container
+				+title({
+					classes: 'home-intro__title',
+					text: 'ЭНЦИКЛОПЕДИЯ ЗАБАЙКАЛЬЯ',
+					cMode: 'light',
+					tag: 'h1',
+				})
+				+search-form({
+					classes: 'home-intro__search',
+					btnCMode: 'gradient'
+				})
+
+		section.section.home-news
+			.section__container.sidebar-layout
+				.sidebar-layout__content
+					+title({
+						text: 'Новости',
+						size: '30'
+
+					})
+					.home-news__list
+						+news-card({
+							classes: 'news-card--big',
+							img: 'img/home/news_1.webp',
+							title: '«Здесь природа, здесь тишина. Мне прям хорошо». Блогеры сняли выпуск VK «Места» о Забайкалье и поразились',
+							date: '7 августа'
+						})
+						+news-card({
+							classes: '',
+							img: 'img/home/news_2.webp',
+							title: 'Как «Орел и решка», но ведущие — дети. Участники «Движения Первых» сняли видео о красотах Забайкалья',
+							date: '5 августа'
+						})
+						+news-card({
+							classes: '',
+							img: 'img/home/news_3.webp',
+							title: 'В селе Нерчинский Завод презентовали одноименную книгу',
+							date: '5 августа'
+						})
+						+news-card({
+							classes: '',
+							img: 'img/home/news_4.webp',
+							title: 'К слогану добавился логотип — на его разработку в Забайкалье не затратили бюджетных средств',
+							date: '5 августа'
+						})
+						+news-card({
+							classes: '',
+							img: 'img/home/news_5.webp',
+							title: 'От каждого района по сосне. Выставка елок пройдет на площади в Чите перед Новым годом',
+							date: '5 августа'
+						})
+						+news-card({
+							classes: '',
+							img: 'img/home/news_6.webp',
+							title: 'В Забайкальском краевом краеведческом музее презентовали "Нерчинский Завод"',
+							date: '5 августа'
+						})
+						+news-card({
+							classes: '',
+							img: 'img/home/news_7.webp',
+							title: 'Солдат с ребенком на руках. В Чите утвердили логотип на День города',
+							date: '5 августа'
+						})
+						+news-card({
+							classes: '',
+							img: 'img/home/news_2.webp',
+							title: 'Как «Орел и решка», но ведущие — дети. Участники «Движения Первых» сняли видео о красотах Забайкалья',
+							date: '5 августа'
+						})
+						+news-card({
+							classes: '',
+							img: 'img/home/news_3.webp',
+							title: 'В селе Нерчинский Завод презентовали одноименную книгу',
+							date: '5 августа'
+						})
+						+news-card({
+							classes: '',
+							img: 'img/home/news_4.webp',
+							title: 'К слогану добавился логотип — на его разработку в Забайкалье не затратили бюджетных средств',
+							date: '5 августа'
+						})
+						+news-card({
+							classes: '',
+							img: 'img/home/news_5.webp',
+							title: 'От каждого района по сосне. Выставка елок пройдет на площади в Чите перед Новым годом',
+							date: '5 августа'
+						})
+						+news-card({
+							classes: '',
+							img: 'img/home/news_6.webp',
+							title: 'В Забайкальском краевом краеведческом музее презентовали "Нерчинский Завод"',
+							date: '5 августа'
+						})
+						+news-card({
+							classes: '',
+							img: 'img/home/news_7.webp',
+							title: 'Солдат с ребенком на руках. В Чите утвердили логотип на День города',
+							date: '5 августа'
+						})
+
+					+pagination
+
+				.sidebar-layout__sidebar
+					+sidebar-events

@@ -29,48 +29,32 @@
     &--41 {
         font-size: 41.27px;
 
-        @include max(laptop) {
-            font-size: 67px;
+        @include max(tablet) {
+            font-size: 36px;
         }
 
         @include max(mobile) {
-            font-size: 53px;
-        }
-
-        @include max(xs) {
-            font-size: 40px;
+            font-size: 27.62px;
         }
     }
 
     &--30 {
         font-size: 30px;
 
-        @include max(laptop) {
-            font-size: 53px;
-        }
-
         @include max(mobile) {
-            font-size: 40px;
-        }
-
-        @include max(xs) {
-            font-size: 32px;
+            font-size: 24px;
         }
     }
 
     &--20 {
         font-size: 20px;
 
-        @include max(laptop) {
-            font-size: 40px;
+        @include max(tablet) {
+            //font-size: 40px;
         }
 
         @include max(mobile) {
-            font-size: 32px;
-        }
-
-        @include max(xs) {
-            font-size: 28px;
+            //font-size: 32px;
         }
     }
 

@@ -150,7 +150,7 @@ table {
 }
 
 .page-layout {
-	padding-top: 58px;
+	padding-top: 57px;
 	padding-bottom: 48px;
 }
 
@@ -170,11 +170,20 @@ table {
 	align-items: flex-start;
 	gap: 24px;
 
+	@include max(tablet) {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
 	&__content {
 		flex: 1 1 auto;
 	}
 
 	&__sidebar {
 		flex: 0 0 300px;
+
+		@include max(tablet) {
+			flex-basis: auto;
+		}
 	}
 }
