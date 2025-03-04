@@ -1,0 +1,15 @@
+.about-section {
+    padding-top: 32px;
+
+    &__title {
+        margin-top: 12px;
+    }
+
+    &__content {
+        margin-top: 32px;
+
+        @include max(mobile) {
+            margin-top: 24px;
+        }
+    }
+}

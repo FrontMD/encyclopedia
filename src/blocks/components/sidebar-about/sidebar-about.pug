@@ -1,0 +1,24 @@
+-
+	const defaultSidebarAboutProps = {
+		classes: '',
+		items: [],
+		active: 0
+	}
+
+mixin sidebar-about(props = defaultSidebarAboutProps)
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultSidebarEventsProps.classes,
+			items: props.items ? props.items : defaultSidebarEventsProps.items,
+			active: props.active ? props.active : defaultSidebarEventsProps.active,
+		}
+
+	.sidebar-about(class=checkProps.classes)&attributes(attributes)
+		- let itemsCount = 0
+		- while(itemsCount < checkProps.items.length)
+			- if(itemsCount == checkProps.active)
+				.sidebar-about__item.sidebar-about__item--current!= checkProps.items[itemsCount]
+			- else
+				a(href="javascript:void(0)").sidebar-about__item!= checkProps.items[itemsCount]
+
+			- itemsCount++

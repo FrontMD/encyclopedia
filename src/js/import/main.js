@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     $('img.lazyload').lazyload();
+    fancyboxInit();
 })
 
 // Блокировка скролла при открытии модалок
@@ -33,4 +34,37 @@ function getScrollbarWidth() {
     div.remove();
 
     return scrollWidth
+}
+
+// инициализация фансибокса
+function fancyboxInit() {
+    if (typeof window.distPath == 'undefined') {
+        window.distPath = '';
+    }
+    Fancybox.bind("[data-fancybox]", {
+        placeFocusBack: false,
+        mainClass: 'my-fancybox',
+        idle: false,
+        Carousel: {
+            transition: "crossfade",
+            Navigation: {
+                prevTpl: `<svg><use xlink:href=${window.distPath}img/sprites/sprite.svg#arrow_classic></use></svg>`,
+                nextTpl: `<svg><use xlink:href=${window.distPath}img/sprites/sprite.svg#arrow_classic></use></svg>`,
+              },
+        },
+        Thumbs: {
+            type: "classic",
+        },
+        Toolbar: {
+            enabled: true,
+            display: {
+                left: [],
+                middle: [],
+                right: [
+                  "close",
+                ],
+            },
+        }
+
+    });
 }

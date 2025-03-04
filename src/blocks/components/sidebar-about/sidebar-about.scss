@@ -1,0 +1,37 @@
+.sidebar-about {
+    padding: 16px;
+    border-radius: 12px;
+    background-color: $c-bg-light;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include max(tablet) {
+        margin-bottom: 16px;
+    }
+
+    &__item {
+        font-size: 16px;
+        line-height: 1.5em;
+        color: $c-accent;
+        transition: color $tr-time linear;
+
+        @include max(mobile) {
+            font-size: 14px;
+            line-height: 1.4286em;
+        }
+
+        &:hover {
+            color: $c-accent-hover;
+        }
+
+        &--current {
+            color: $c-text;
+        }
+
+        &--current:hover {
+            color: $c-text;
+        }
+    }
+
+}

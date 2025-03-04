@@ -1,0 +1,31 @@
+-
+	const defaultGalleryBlockProps = {
+		classes: '',
+		items: []
+	}
+
+mixin gallery-block(props = defaultGalleryBlockProps)
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultGalleryBlockProps.classes,
+			items: props.items ? props.items : defaultGalleryBlockProps.items,
+		}
+
+	.gallery-block(class=checkProps.classes)&attributes(attributes)
+		- let itemsCount = 0
+		.gallery-block__items
+			- while(itemsCount < 3)
+				- if(itemsCount == 2)
+					a(href=checkProps.items[itemsCount] data-fancybox='gallery' data-thumb=checkProps.items[itemsCount]).gallery-block__item.gallery-block__item--last
+						img(src=checkProps.items[itemsCount])
+						.gallery-block__counter +1
+				- else
+					a(href=checkProps.items[itemsCount] data-fancybox='gallery' data-thumb=checkProps.items[itemsCount]).gallery-block__item
+						img(src=checkProps.items[itemsCount])
+
+				- itemsCount++
+		.gallery-block__links.hidden
+			- while(itemsCount > 2 && itemsCount < checkProps.items.length)
+				a(href=checkProps.items[itemsCount] data-fancybox='gallery' data-thumb=checkProps.items[itemsCount])
+
+				- itemsCount++

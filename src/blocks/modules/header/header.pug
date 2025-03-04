@@ -1,27 +1,29 @@
-header.site-header(data-js="siteHeader")
-	.site-header__container
-		.site-header__burger(data-js="siteHeaderBurgerBtn")
-			svg.open
-				use(xlink:href=`img/sprites/sprite.svg#burger`)
-			svg.close
-				use(xlink:href=`img/sprites/sprite.svg#close`)
-		.site-header__logo
-			a(href="javascript:void(0);") 
-				img(src="img/logo.svg" alt="логотип Энциклопедия Забайкалья")
-		nav.site-header__nav
-			ul.nav-menu
-				li.nav-menu__item
-					a(href="javascript:void(0);") О проекте
-				li.nav-menu__item
-					a(href="javascript:void(0);") Энциклопедия
+mixin header(activeLinks = [])
 
-	.site-header__submenu.burger(data-js="siteHeaderBurger")
-		.burger__container
-			.burger-menu
-				a.burger-menu__item(href="javascript:void(0);") О проекте
-				a.burger-menu__item(href="javascript:void(0);") Энциклопедия Забайкалья
-				a.burger-menu__item(href="javascript:void(0);") Малая ЭЗ
-				a.burger-menu__item(href="javascript:void(0);") Библиотека ЭЗ
-				a.burger-menu__item(href="javascript:void(0);") Альбомная серия ЭЗ
-				a.burger-menu__item(href="javascript:void(0);") Избранные труды
-				a.burger-menu__item(href="javascript:void(0);") Еще
+	header.site-header(data-js="siteHeader")
+		.site-header__container
+			.site-header__burger(data-js="siteHeaderBurgerBtn")
+				svg.open
+					use(xlink:href=`img/sprites/sprite.svg#burger`)
+				svg.close
+					use(xlink:href=`img/sprites/sprite.svg#close`)
+			.site-header__logo
+				a(href="javascript:void(0);") 
+					img(src="img/logo.svg" alt="логотип Энциклопедия Забайкалья")
+			nav.site-header__nav
+				ul.nav-menu
+					li.nav-menu__item
+						a(class=`${activeLinks.length > 0 && activeLinks[0] == 1 ? 'active' : ''}` href="javascript:void(0);") О проекте
+					li.nav-menu__item
+						a(class=`${activeLinks.length > 0 && activeLinks[0] == 2 ? 'active' : ''}` href="javascript:void(0);") Энциклопедия
+
+		.site-header__submenu.burger(data-js="siteHeaderBurger")
+			.burger__container
+				.burger-menu
+					a.burger-menu__item(class=`${activeLinks.length > 0 && activeLinks[1] == 1 ? 'active' : ''}` href="javascript:void(0);") О проекте
+					a.burger-menu__item(class=`${activeLinks.length > 0 && activeLinks[1] == 2 ? 'active' : ''}` href="javascript:void(0);") Энциклопедия Забайкалья
+					a.burger-menu__item(class=`${activeLinks.length > 0 && activeLinks[1] == 3 ? 'active' : ''}` href="javascript:void(0);") Малая ЭЗ
+					a.burger-menu__item(class=`${activeLinks.length > 0 && activeLinks[1] == 4 ? 'active' : ''}` href="javascript:void(0);") Библиотека ЭЗ
+					a.burger-menu__item(class=`${activeLinks.length > 0 && activeLinks[1] == 5 ? 'active' : ''}` href="javascript:void(0);") Альбомная серия ЭЗ
+					a.burger-menu__item(class=`${activeLinks.length > 0 && activeLinks[1] == 6 ? 'active' : ''}` href="javascript:void(0);") Избранные труды
+					a.burger-menu__item(class=`${activeLinks.length > 0 && activeLinks[1] == 7 ? 'active' : ''}` href="javascript:void(0);") Еще

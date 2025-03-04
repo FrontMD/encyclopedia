@@ -1,0 +1,51 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Малая Энциклопедия Забайкалья"
+	- const activeLinks = [1, 3]
+
+block content
+	.page-layout
+		section.section.about-section
+			.section__container.sidebar-layout.sidebar-layout--reverse
+				.sidebar-layout__content
+					+breadcrumbs({
+						items: [
+							{
+								name: 'О проекте',
+								link: 'javascript:void(0);'
+							},
+							{
+								name: 'О проекте «Малая Энциклопедия Забайкалья»',
+								link: 'javascript:void(0);'
+							}
+						]
+					})
+					+title({
+						classes: 'about-section__title',
+						tag: 'h1',
+						text: 'О проекте «Малая Энциклопедия Забайкалья»',
+						size: '30'
+					})
+
+					.about-section__content.text-editor
+						img(src="img/about/about_4.webp")
+
+						p В серии «Малая энциклопедия Забайкалья: Читинская область» планируется издание томов, посвященных государственной и муниципальной власти, историко-культурному наследию, здравоохранению и медицине, науке и образованию, технике, экономике и др. В 2007 году издана первая книга серии — «Физическая культура и спорт», в 2009 году — «Природное наследие».
+
+				.sidebar-layout__sidebar
+					+sidebar-about({
+						items: [
+							'О проекте «Малая Энциклопедия Забайкалья»',
+							'Археология',
+							'Архитектура и строительство',
+							'Власть и общество: В 2 ч.',
+							'Здравоохранение и медицина',
+							'Культура: В 2 ч.',
+							'Международные связи',
+							'Наука и образование: В 2 ч.',
+							'Природное наследие',
+							'Физическая культура и спорт',
+						]
+					})

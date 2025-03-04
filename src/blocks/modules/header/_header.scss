@@ -178,7 +178,8 @@
         line-height: 1.4286em;
         transition: color $tr-time linear;
 
-        &:hover {
+        &:hover,
+        &.active {
             color: $c-accent;
         }
     }
