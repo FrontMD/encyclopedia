@@ -45,7 +45,6 @@
         }
 
         @include max(mobile) {
-            padding: 0;
             gap: 12px;
         }
     }

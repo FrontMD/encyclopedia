@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Энциклопедия - подраздел</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.min.css">
+  </head>
+  <body>
+        <header class="site-header" data-js="siteHeader">
+          <div class="site-header__container">
+            <div class="site-header__burger" data-js="siteHeaderBurgerBtn">
+              <svg class="open">
+                <use xlink:href="img/sprites/sprite.svg#burger"></use>
+              </svg>
+              <svg class="close">
+                <use xlink:href="img/sprites/sprite.svg#close"></use>
+              </svg>
+            </div>
+            <div class="site-header__logo"><a href="javascript:void(0);"> <img src="img/logo.svg" alt="логотип Энциклопедия Забайкалья"></a></div>
+            <nav class="site-header__nav">
+              <ul class="nav-menu">
+                <li class="nav-menu__item"><a href="javascript:void(0);">О проекте</a></li>
+                <li class="nav-menu__item"><a class="active" href="javascript:void(0);">Энциклопедия</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="site-header__submenu burger" data-js="siteHeaderBurger">
+            <div class="burger__container">
+              <div class="burger-menu"><a class="burger-menu__item" href="javascript:void(0);">О проекте</a><a class="burger-menu__item active" href="javascript:void(0);">Энциклопедия Забайкалья</a><a class="burger-menu__item" href="javascript:void(0);">Малая ЭЗ</a><a class="burger-menu__item" href="javascript:void(0);">Библиотека ЭЗ</a><a class="burger-menu__item" href="javascript:void(0);">Альбомная серия ЭЗ</a><a class="burger-menu__item" href="javascript:void(0);">Избранные труды</a><a class="burger-menu__item" href="javascript:void(0);">Еще</a></div>
+            </div>
+          </div>
+        </header>
+    <main class="site-main">
+      <div class="page-layout" data-js="pageLayout">
+        <section class="section ency">
+          <div class="section__container">
+                <form class="search-form" data-js="searchForm">
+                  <div class="search-form__main">
+                    <div class="search-form__field">
+                      <input class="search-form__input" type="text" placeholder="Искать в энциклопедии" data-js="searchFormInput">
+                      <button class="search-form__search" type="submit">
+                        <svg> 
+                          <use xlink:href="img/sprites/sprite.svg#search"></use>
+                        </svg>
+                      </button>
+                      <div class="search-form__results" data-js="searchFormResults">
+                        <div class="search-form__prompts"><a class="search-form__prompt" href="javascript:void(0)">Чита, ж.д. узел</a><a class="search-form__prompt" href="javascript:void(0)">Чита, река</a><a class="search-form__prompt" href="javascript:void(0)">Чита - Забайкальск А-166</a><a class="search-form__prompt" href="javascript:void(0)">Гимназия № 4 г. Чита</a><a class="search-form__prompt" href="javascript:void(0)">Верх-Чита</a></div><a class="search-form__all" href="javascript:void(0)">Показать все результаты</a>
+                      </div>
+                    </div>
+                        <button class="btn search-form__submit" type="submit">
+                          <div class="btn__text">Найти</div>
+                          <div class="btn__icon">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#arrow_classic"></use>
+                            </svg>
+                          </div>
+                        </button>
+                  </div>
+                  <div class="search-form__footer">
+                    <div class="search-form__note" data-js="searchFormNote">К сожалению, ничего не нашлось</div>
+                  </div>
+                </form>
+          </div>
+          <div class="section__container sidebar-layout">
+            <div class="sidebar-layout__content">
+                  <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                      <li class="breadcrumbs__item"><a href="javascript:void(0);">Энциклопедия</a><span class="breadcrumbs__separator"> /</span>
+                      </li>
+                      <li class="breadcrumbs__item"><a href="javascript:void(0);">Понятия</a><span class="breadcrumbs__separator"> /</span>
+                      </li>
+                      <li class="breadcrumbs__item"><a href="javascript:void(0);">Природа</a><span class="breadcrumbs__separator"> /</span>
+                      </li>
+                      <li class="breadcrumbs__item breadcrumbs__item--current"><span>Рельеф. Гидрология. Климат. Почвы. Прочее</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="title ency__title title--30 title--dark">
+                    <h1>Рельеф. Гидрология. Климат. Почвы. Прочее</h1>
+                  </div>
+              <div class="ency__letters">
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">А</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Ага, река</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Агинская степь</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Агинский хребет</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Агинское межгорное понижение</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Агуца, река</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Азотные термы</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Аку, озеро</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Аку, палеовулкан</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Алеурский хребет</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Алёнушка, озеро</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Алёнушка, родник</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Алкучанский Говин</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Аллювиальные почвы</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Алтано-Кыринская впадина</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Амазар, река</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Амазарский хребет</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Амур, река</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Антициклон сибирский</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Апсат, река</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Апсатская впадина</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Арахлей, озеро</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Арбагаро-Холбонская впадина</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Аргалей хребет</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Аргунская впадина</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Аргунский хребет</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Аргунь, река</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Ареда, река</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Асинский хребет</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">Б</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Бадата</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Бадинская впадина</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Байкал, озеро</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Байкало-Чарская гидроминеральная область</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">В</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Верхнекаларская впадина</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Верхненерчинская впадина</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Верхнеолёкминская впадина</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Верхнетаксиминская впадина</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">Г</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Газимур, река</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Газимурские впадины</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Газимурский хребет</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Геосистема</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">Д</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Даурский хребет</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Двенадцать Ключей</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Депрессия азиатская</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Дерново-карбонатные почвы</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">Ж</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Жергоконский хребет</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">З</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Забайкалье</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Заганский хребет</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Заморозок</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Западно-Урулюнгуйская впадина</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">И</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Иван, озеро</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Ивано-Арахлейские озёра</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Изменения климата</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Иля, река</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">К</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Калакан</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Калаканская впадина</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Калаканский хребет</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Калар</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">Л</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Лавовое плато Станового нагорья</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Ландшафт</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Ледники Кодара</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Ледопады</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">М</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Малханский хребет</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Массивы песков</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Менза, река</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Мензинский хребет</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">Н</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Наледная поляна</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Наледь</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Ненюга</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Ненюгинская впадина</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">О</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Обручева, вулкан</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Озеро каровое</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Озеро моренное</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Озеро троговое</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">П</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Патомское нагорье</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Перевальный хребет</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Перехваты речных систем</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Пик БАМ</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">Р</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Реки</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">С</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Северный Дырындинский хребет</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Северо-Аргунская впадина</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Седиментационные впадины</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Сезоны года</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">Т</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Тайга</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Таксима</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Талангуй</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Талачинский хребет</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">У</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Угдан, грязевое озеро</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Удокан, хребет</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Улдза</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Улдза-Торейская высокая равнина</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">Ф</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Форберг</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">Х</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Хадактинское, минеральное озеро</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Халхин-Гол</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Хангилайский хребет</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Хани</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">Ц</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Цаган-Дабан</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Цаган-Хуртэй</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Цугольская впадина</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Цугольский хребет</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Цунговый бассейн</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">Ч</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Чара, река</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Чарская впадина</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Чатангинский хребет</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Чепе</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">Ш</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Шакшинское, озеро</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Шаманская впадина</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Шебеты</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Шилка, река</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">Э</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Эймнахские минеральные источники</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Эрмана, хребет</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Эсутайский хребет</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">Ю</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Южно-Муйский хребет</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Южный Дырындинский хребет</a>
+                      </div>
+                    </div>
+                    <div class="ency-letter" data-js="encyLetter">
+                      <div class="ency-letter__title">Я</div>
+                      <div class="ency-letter__links" data-js="encyLetterList"><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Яблоновый хребет</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Янкан (амурский)</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Янкан, хребет</a><a class="ency__link" href="javascript:void(0)" data-js="encyLetterLink">Ярусы климатические</a>
+                      </div>
+                    </div>
+              </div>
+            </div>
+            <div class="sidebar-layout__sidebar">
+                  <div class="sidebar-ency">
+                        <div class="title  title--20 title--dark">
+                          <p>Категории</p>
+                        </div>
+                    <div class="sidebar-ency__links"><a class="sidebar-ency__link" href="javascript:void(0)">А</a><a class="sidebar-ency__link" href="javascript:void(0)">Б</a><a class="sidebar-ency__link" href="javascript:void(0)">В</a><a class="sidebar-ency__link" href="javascript:void(0)">Г</a><a class="sidebar-ency__link" href="javascript:void(0)">Д</a><a class="sidebar-ency__link" href="javascript:void(0)">Е</a><a class="sidebar-ency__link" href="javascript:void(0)">Ж</a><a class="sidebar-ency__link" href="javascript:void(0)">З</a><a class="sidebar-ency__link" href="javascript:void(0)">И</a><a class="sidebar-ency__link" href="javascript:void(0)">К</a><a class="sidebar-ency__link" href="javascript:void(0)">Л</a><a class="sidebar-ency__link" href="javascript:void(0)">М</a><a class="sidebar-ency__link" href="javascript:void(0)">Н</a><a class="sidebar-ency__link" href="javascript:void(0)">О</a><a class="sidebar-ency__link" href="javascript:void(0)">П</a><a class="sidebar-ency__link" href="javascript:void(0)">Р</a><a class="sidebar-ency__link" href="javascript:void(0)">С</a><a class="sidebar-ency__link" href="javascript:void(0)">Т</a><a class="sidebar-ency__link" href="javascript:void(0)">У</a><a class="sidebar-ency__link" href="javascript:void(0)">Ф</a><a class="sidebar-ency__link" href="javascript:void(0)">Х</a><a class="sidebar-ency__link" href="javascript:void(0)">Ц</a><a class="sidebar-ency__link" href="javascript:void(0)">Ч</a><a class="sidebar-ency__link" href="javascript:void(0)">Ш</a><a class="sidebar-ency__link" href="javascript:void(0)">Щ</a><a class="sidebar-ency__link" href="javascript:void(0)">Э</a><a class="sidebar-ency__link" href="javascript:void(0)">Ю</a><a class="sidebar-ency__link" href="javascript:void(0)">Я</a></div>
+                  </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__container">
+        <ul class="nav-menu nav-menu--footer">
+          <li class="nav-menu__item"><a href="javascript:void(0);">О проекте</a></li>
+          <li class="nav-menu__item"><a href="javascript:void(0);">Энциклопедия</a></li>
+        </ul><a class="site-footer__logo" href="javascript:void(0);"><img src="img/holding_logo.svg"></a>
+        <div class="site-footer__text">
+          <p>Сетевое издание </p>
+          <p>Регистрационный номер ЭЛ № ФС 77 - 83698</p>
+          <p>Зарегистрировано Федеральной службой по надзору в сфере связи, информационных технологий и массовых, коммуникаций (Роскомнадзор) 26.07.2022 18+</p>
+          <p>Учредитель: Общество с ограниченной ответственностью «Шкулёв Диджитал Технологии»</p>
+          <p>Главный редактор: Ананьина А. Ю.</p>
+          <p>Контактные данные для государственных органов (в том числе, для Роскомнадзора):</p>
+          <p>Эл. почта: <a href="mailto:starhit.ru_legal@sholding.ru">starhit.ru_legal@sholding.ru</a> телефон: <a href="tel:+74956335633">+7(495) 633-5-633</a></p>
+          <p>Copyright (с) ООО «Шкулёв Диджитал Технологии», 2024. Любое воспроизведение материалов сайта без разрешения редакции воспрещается.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

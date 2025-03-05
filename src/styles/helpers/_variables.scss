@@ -1,6 +1,7 @@
 :root {
     --c-accent: #01BE84;
     --c-text: #222;
+    --burger-height: '40px';
 }
 
 // шрифты
@@ -24,9 +25,12 @@ $c-text: var(--c-text);
 $c-accent-hover: #01A271;
 $c-text-grey: #808080;
 $c-text-placeholder: #ABABAB;
+$c-text-show: #77808C;
 $c-border: #ccc;
 $c-bg-grey: #EFEFEF;
 $c-bg-light: #F5F5F5;
 
 // переходы
 $tr-time: .3s;
+
+$burger-height: var(--burger-height);

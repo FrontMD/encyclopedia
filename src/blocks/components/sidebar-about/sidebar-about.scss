@@ -2,12 +2,17 @@
     padding: 16px;
     border-radius: 12px;
     background-color: $c-bg-light;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
 
     @include max(tablet) {
         margin-bottom: 16px;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        overflow: hidden;
+        transition: max-height $tr-time linear;
     }
 
     &__item {
@@ -31,6 +36,37 @@
 
         &--current:hover {
             color: $c-text;
+        }
+    }
+
+    &__show {
+        display: flex;
+        width: fit-content;
+        margin: 0 auto;
+        color: $c-text-show;
+        cursor: pointer;
+        transition: all $tr-time linear;
+
+        &--opened {
+            margin-top: 16px;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        &--opened {
+            .show {
+                display: none;
+            }
+
+            .hide {
+                display: block;
+            }
         }
     }
 

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Энциклопедия</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.min.css">
+  </head>
+  <body>
+        <header class="site-header" data-js="siteHeader">
+          <div class="site-header__container">
+            <div class="site-header__burger" data-js="siteHeaderBurgerBtn">
+              <svg class="open">
+                <use xlink:href="img/sprites/sprite.svg#burger"></use>
+              </svg>
+              <svg class="close">
+                <use xlink:href="img/sprites/sprite.svg#close"></use>
+              </svg>
+            </div>
+            <div class="site-header__logo"><a href="javascript:void(0);"> <img src="img/logo.svg" alt="логотип Энциклопедия Забайкалья"></a></div>
+            <nav class="site-header__nav">
+              <ul class="nav-menu">
+                <li class="nav-menu__item"><a href="javascript:void(0);">О проекте</a></li>
+                <li class="nav-menu__item"><a class="active" href="javascript:void(0);">Энциклопедия</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="site-header__submenu burger" data-js="siteHeaderBurger">
+            <div class="burger__container">
+              <div class="burger-menu"><a class="burger-menu__item" href="javascript:void(0);">О проекте</a><a class="burger-menu__item active" href="javascript:void(0);">Энциклопедия Забайкалья</a><a class="burger-menu__item" href="javascript:void(0);">Малая ЭЗ</a><a class="burger-menu__item" href="javascript:void(0);">Библиотека ЭЗ</a><a class="burger-menu__item" href="javascript:void(0);">Альбомная серия ЭЗ</a><a class="burger-menu__item" href="javascript:void(0);">Избранные труды</a><a class="burger-menu__item" href="javascript:void(0);">Еще</a></div>
+            </div>
+          </div>
+        </header>
+    <main class="site-main">
+      <div class="page-layout" data-js="pageLayout">
+        <section class="section ency-common ency">
+          <div class="section__container">
+                <form class="search-form" data-js="searchForm">
+                  <div class="search-form__main">
+                    <div class="search-form__field">
+                      <input class="search-form__input" type="text" placeholder="Искать в энциклопедии" data-js="searchFormInput">
+                      <button class="search-form__search" type="submit">
+                        <svg> 
+                          <use xlink:href="img/sprites/sprite.svg#search"></use>
+                        </svg>
+                      </button>
+                      <div class="search-form__results" data-js="searchFormResults">
+                        <div class="search-form__prompts"><a class="search-form__prompt" href="javascript:void(0)">Чита, ж.д. узел</a><a class="search-form__prompt" href="javascript:void(0)">Чита, река</a><a class="search-form__prompt" href="javascript:void(0)">Чита - Забайкальск А-166</a><a class="search-form__prompt" href="javascript:void(0)">Гимназия № 4 г. Чита</a><a class="search-form__prompt" href="javascript:void(0)">Верх-Чита</a></div><a class="search-form__all" href="javascript:void(0)">Показать все результаты</a>
+                      </div>
+                    </div>
+                        <button class="btn search-form__submit" type="submit">
+                          <div class="btn__text">Найти</div>
+                          <div class="btn__icon">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#arrow_classic"></use>
+                            </svg>
+                          </div>
+                        </button>
+                  </div>
+                  <div class="search-form__footer">
+                    <div class="search-form__note" data-js="searchFormNote">К сожалению, ничего не нашлось</div>
+                  </div>
+                </form>
+          </div>
+          <div class="section__container">
+                <div class="title ency-common__title title--30 title--dark">
+                  <h1>Энциклопедия</h1>
+                </div>
+            <div class="ency-common__content">
+              <div class="ency-common__side">
+                    <div class="title  title--24 title--dark">
+                      <h2>Персоналии</h2>
+                    </div>
+                <div class="ency-common__list"><a class="ency__link" href="javascript:void(0)">Альбомная серия</a><a class="ency__link" href="javascript:void(0)">Здравоохранение</a><a class="ency__link" href="javascript:void(0)">История</a><a class="ency__link" href="javascript:void(0)">Культура</a><a class="ency__link" href="javascript:void(0)">Наука и образование</a><a class="ency__link" href="javascript:void(0)">Спорт</a><a class="ency__link" href="javascript:void(0)">Средства массовой информации</a><a class="ency__link" href="javascript:void(0)">Филология</a><a class="ency__link" href="javascript:void(0)">Этнография и религия</a></div>
+              </div>
+              <div class="ency-common__side">
+                    <div class="title  title--24 title--dark">
+                      <h2>Понятия</h2>
+                    </div>
+                <div class="ency-common__list"><a class="ency__link" href="javascript:void(0)">Административно-территориальное деление</a><a class="ency__link" href="javascript:void(0)">Альбомная серия</a><a class="ency__link" href="javascript:void(0)">Архитектура и строительство</a><a class="ency__link" href="javascript:void(0)">Власть и общество</a><a class="ency__link" href="javascript:void(0)">Здравоохранение</a><a class="ency__link" href="javascript:void(0)">История</a><a class="ency__link" href="javascript:void(0)">Культивируемые растения. Сельскохозяйственные животные. Ветеринария.</a><a class="ency__link" href="javascript:void(0)">Культура</a><a class="ency__link" href="javascript:void(0)">Международные связи</a><a class="ency__link" href="javascript:void(0)">Наука и образование</a><a class="ency__link" href="javascript:void(0)">Природа</a><a class="ency__link" href="javascript:void(0)">Спорт</a><a class="ency__link" href="javascript:void(0)">Средства массовой информации</a><a class="ency__link" href="javascript:void(0)">Техника и технологии</a><a class="ency__link" href="javascript:void(0)">Филология</a><a class="ency__link" href="javascript:void(0)">Экономика</a><a class="ency__link" href="javascript:void(0)">Этнография и религия</a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__container">
+        <ul class="nav-menu nav-menu--footer">
+          <li class="nav-menu__item"><a href="javascript:void(0);">О проекте</a></li>
+          <li class="nav-menu__item"><a href="javascript:void(0);">Энциклопедия</a></li>
+        </ul><a class="site-footer__logo" href="javascript:void(0);"><img src="img/holding_logo.svg"></a>
+        <div class="site-footer__text">
+          <p>Сетевое издание </p>
+          <p>Регистрационный номер ЭЛ № ФС 77 - 83698</p>
+          <p>Зарегистрировано Федеральной службой по надзору в сфере связи, информационных технологий и массовых, коммуникаций (Роскомнадзор) 26.07.2022 18+</p>
+          <p>Учредитель: Общество с ограниченной ответственностью «Шкулёв Диджитал Технологии»</p>
+          <p>Главный редактор: Ананьина А. Ю.</p>
+          <p>Контактные данные для государственных органов (в том числе, для Роскомнадзора):</p>
+          <p>Эл. почта: <a href="mailto:starhit.ru_legal@sholding.ru">starhit.ru_legal@sholding.ru</a> телефон: <a href="tel:+74956335633">+7(495) 633-5-633</a></p>
+          <p>Copyright (с) ООО «Шкулёв Диджитал Технологии», 2024. Любое воспроизведение материалов сайта без разрешения редакции воспрещается.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

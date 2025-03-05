@@ -1,0 +1,47 @@
+-
+	const defaultSidebarEncyProps = {
+		classes: '',
+	}
+
+mixin sidebar-ency(props = defaultSidebarEncyProps)
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultSidebarEncyProps.classes,
+		}
+
+	.sidebar-ency(class=checkProps.classes)&attributes(attributes)
+		+title({
+			tag: 'p',
+			text: 'Категории',
+			size: '20'
+		})
+
+		.sidebar-ency__links
+			a.sidebar-ency__link(href="javascript:void(0)") А
+			a.sidebar-ency__link(href="javascript:void(0)") Б
+			a.sidebar-ency__link(href="javascript:void(0)") В
+			a.sidebar-ency__link(href="javascript:void(0)") Г
+			a.sidebar-ency__link(href="javascript:void(0)") Д
+			a.sidebar-ency__link(href="javascript:void(0)") Е
+			a.sidebar-ency__link(href="javascript:void(0)") Ж
+			a.sidebar-ency__link(href="javascript:void(0)") З
+			a.sidebar-ency__link(href="javascript:void(0)") И
+			a.sidebar-ency__link(href="javascript:void(0)") К
+			a.sidebar-ency__link(href="javascript:void(0)") Л
+			a.sidebar-ency__link(href="javascript:void(0)") М
+			a.sidebar-ency__link(href="javascript:void(0)") Н
+			a.sidebar-ency__link(href="javascript:void(0)") О
+			a.sidebar-ency__link(href="javascript:void(0)") П
+			a.sidebar-ency__link(href="javascript:void(0)") Р
+			a.sidebar-ency__link(href="javascript:void(0)") С
+			a.sidebar-ency__link(href="javascript:void(0)") Т
+			a.sidebar-ency__link(href="javascript:void(0)") У
+			a.sidebar-ency__link(href="javascript:void(0)") Ф
+			a.sidebar-ency__link(href="javascript:void(0)") Х
+			a.sidebar-ency__link(href="javascript:void(0)") Ц
+			a.sidebar-ency__link(href="javascript:void(0)") Ч
+			a.sidebar-ency__link(href="javascript:void(0)") Ш
+			a.sidebar-ency__link(href="javascript:void(0)") Щ
+			a.sidebar-ency__link(href="javascript:void(0)") Э
+			a.sidebar-ency__link(href="javascript:void(0)") Ю
+			a.sidebar-ency__link(href="javascript:void(0)") Я

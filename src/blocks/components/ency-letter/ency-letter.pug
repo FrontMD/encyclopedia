@@ -1,0 +1,24 @@
+-
+    const defaultEncyLetterProps = {
+        classes: '',
+        title: '',
+        items: []
+    }
+
+mixin ency-letter(props = defaultEncyLetterProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultEncyLetterProps.classes,
+            title: props.title ? props.title : defaultEncyLetterProps.title,
+            items: props.items ? props.items : defaultEncyLetterProps.items,
+        }
+
+    .ency-letter(class=checkProps.classes data-js="encyLetter")&attributes(attributes)
+        .ency-letter__title!= checkProps.title
+        .ency-letter__links(data-js="encyLetterList")
+            - let itemsCount = 0
+            - while(itemsCount < checkProps.items.length)
+                a.ency__link(href="javascript:void(0)" data-js="encyLetterLink")!= checkProps.items[itemsCount]
+
+                - itemsCount++
+

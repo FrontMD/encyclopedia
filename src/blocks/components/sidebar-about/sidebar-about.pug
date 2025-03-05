@@ -8,17 +8,18 @@
 mixin sidebar-about(props = defaultSidebarAboutProps)
 	-
 		const checkProps = {
-			classes: props.classes ? props.classes : defaultSidebarEventsProps.classes,
-			items: props.items ? props.items : defaultSidebarEventsProps.items,
-			active: props.active ? props.active : defaultSidebarEventsProps.active,
+			classes: props.classes ? props.classes : defaultSidebarAboutProps.classes,
+			items: props.items ? props.items : defaultSidebarAboutProps.items,
+			active: props.active ? props.active : defaultSidebarAboutProps.active,
 		}
 
-	.sidebar-about(class=checkProps.classes)&attributes(attributes)
-		- let itemsCount = 0
-		- while(itemsCount < checkProps.items.length)
-			- if(itemsCount == checkProps.active)
-				.sidebar-about__item.sidebar-about__item--current!= checkProps.items[itemsCount]
-			- else
-				a(href="javascript:void(0)").sidebar-about__item!= checkProps.items[itemsCount]
+	.sidebar-about(class=checkProps.classes data-js="sidebarAbout")&attributes(attributes)
+		.sidebar-about__items(data-js="sidebarAboutItems")
+			- let itemsCount = 0
+			- while(itemsCount < checkProps.items.length)
+				- if(itemsCount == checkProps.active)
+					.sidebar-about__item.sidebar-about__item--current(data-js="sidebarAboutItem")!= checkProps.items[itemsCount]
+				- else
+					a.sidebar-about__item(href="javascript:void(0)" data-js="sidebarAboutItem")!= checkProps.items[itemsCount]
 
-			- itemsCount++
+				- itemsCount++

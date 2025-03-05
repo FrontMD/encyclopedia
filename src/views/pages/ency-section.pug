@@ -1,0 +1,63 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Энциклопедия - раздел"
+	- const activeLinks = [2, 2]
+
+block content
+	.page-layout(data-js="pageLayout")
+		section.section.ency
+			.section__container
+				+search-form
+			.section__container.sidebar-layout
+				.sidebar-layout__content
+					+breadcrumbs({
+						items: [
+							{
+								name: 'Энциклопедия',
+								link: 'javascript:void(0);'
+							},
+							{
+								name: 'Понятия',
+								link: 'javascript:void(0);'
+							},
+							{
+								name: 'Природа',
+								link: 'javascript:void(0);'
+							}
+						]
+					})
+
+					+title({
+						classes: 'ency__title',
+						tag: 'h1',
+						text: 'Природа',
+						size: '30'
+					})
+
+					.ency__letters
+						+ency-letter({
+							title: 'М',
+							items: [
+								'Месторождения полезных ископаемых и минералы',
+							]
+						})
+						+ency-letter({
+							title: 'Р',
+							items: [
+								'Рельеф. Гидрология. Климат. Почвы. Прочее',
+								'Растительный и животный мир'
+							]
+						})
+						+ency-letter({
+							title: 'Э',
+							items: [
+								'Экология, памятники природы, лес',
+							]
+						})
+
+
+
+				.sidebar-layout__sidebar
+					+sidebar-ency

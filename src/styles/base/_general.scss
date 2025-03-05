@@ -107,6 +107,7 @@ body {
 	flex-direction: column;
 	margin: 0;
 	font-family: $ff-main;
+	font-variant-numeric: lining-nums;
 	font-size: 16px;
 	color: $c-text;
 }
@@ -150,7 +151,7 @@ table {
 }
 
 .page-layout {
-	padding-top: 57px;
+	padding-top: 0;
 	padding-bottom: 48px;
 }
 
@@ -177,6 +178,11 @@ table {
 
 	&__content {
 		flex: 1 1 auto;
+		max-width: calc(100% - 324px);
+
+		@include max(tablet) {
+			max-width: 100%;
+		}
 	}
 
 	&__sidebar {
@@ -194,7 +200,7 @@ table {
 	}
 }
 
-.scrollbar {
+/*.scrollbar {
 	&::-webkit-scrollbar {
 		width: 3px;
 		height: 3px;
@@ -209,7 +215,7 @@ table {
 		background-color: $c-bg-grey;
 		border-radius: 2px;
 	}
-}
+}*/
 
 .text-editor {
 	font-size: 16px;

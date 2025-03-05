@@ -1,11 +1,21 @@
 .site-header {
-    position: fixed;
-    left: 0;
-    top: 0;
+    position: relative;
     width: 100%;
     background-color: $c-white;
     z-index: 20;
     border-bottom: 1px solid $c-bg-grey;
+
+    &--fixed {
+        position: fixed;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+
+    &--fixed.site-header--visible {
+        opacity: 1;
+        transition: opacity $tr-time linear;
+    }
 
     @include max(tablet) {
         border-bottom: none;
@@ -49,15 +59,15 @@
         svg.close {
             display: none;
         }
+    }
 
-        &.active {
-            svg.open {
-                display: none;
-            }
+    &--burger &__burger {
+        svg.open {
+            display: none;
+        }
 
-            svg.close {
-                display: block;
-            }
+        svg.close {
+            display: block;
         }
     }
 
@@ -78,24 +88,7 @@
         }
     }
 
-    &__submenu {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        z-index: -10;
 
-        @include max(tablet) {
-            height: 100vh;
-            height: 100dvh;
-            padding-top: 56px;
-            top: 0;
-            bottom: auto;
-            left: auto;
-            right: 100%;
-
-        }
-    }
 }
 
 .nav-menu {
@@ -133,27 +126,28 @@
 }
 
 .burger {
+    position: relative;
+    width: 100%;
     background-color: $c-white;
-    border-bottom: 1px solid $c-bg-grey;
     border-top: 1px solid $c-bg-grey;
-    transform: translateY(-1%);
     border-color: transparent;
-    transition: transform $tr-time linear, border-color 0.1s linear;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all $tr-time linear;
 
     @include max(tablet) {
+        max-height: none;
         transform: translateX(-1%);
-        border: none;
-    }
-
-    &.active {
-        transform: translateY(100%);
-        border-color: $c-bg-grey;
-        transition: transform $tr-time linear, border-color 0.1s linear $tr-time;
-
-        @include max(tablet) {
-            transform: none;
-            transform: translateX(100%);
-        }
+        overflow: auto;
+        position: absolute;
+        height: 100vh;
+        height: 100dvh;
+        padding-top: 56px;
+        top: 0;
+        bottom: auto;
+        left: auto;
+        right: 100%;
+        z-index: -10;
     }
 
     &__container {
@@ -163,6 +157,15 @@
         margin: 0 auto;
     }
 
+}
+
+.site-header--burger .burger {
+    border-color: $c-bg-grey;
+
+    @include max(tablet) {
+        max-height: none;
+        transform: translateX(100%);
+    }
 }
 
 .burger-menu {

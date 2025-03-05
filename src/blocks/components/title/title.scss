@@ -42,7 +42,19 @@
         font-size: 30px;
 
         @include max(mobile) {
-            font-size: 26px;
+            font-size: 24px;
+        }
+    }
+
+    &--24 {
+        font-size: 24px;
+
+        @include max(tablet) {
+            //font-size: 40px;
+        }
+
+        @include max(mobile) {
+            font-size: 20px;
         }
     }
 

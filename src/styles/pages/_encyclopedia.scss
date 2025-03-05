@@ -1,0 +1,85 @@
+.ency {
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include max(tablet) {
+        padding-top: 32px;
+        gap: 24px;
+    }
+
+    &__title {
+        margin-top: 12px;
+        margin-bottom: 24px;
+    }
+
+    &__letters {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px 40px;
+
+        @include max(tablet) {
+            padding-bottom: 48px;
+            gap: 32px;
+        }
+
+        @include max(mobile) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include max(xs) {
+            grid-template-columns: minmax(0, 1fr);
+        }
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5em;
+        color: $c-accent;
+        transition: color $tr-time linear;
+
+        &:hover {
+            color: $c-accent-hover;
+        }
+    }
+}
+
+.ency-common {
+    &__content {
+        margin-top: 24px;
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+
+        @include max(tablet) {
+            gap: 24px;
+        }
+
+        @include max(mobile) {
+            flex-direction: column;
+        }
+
+    }
+
+    &__side {
+        flex: 1 1 50%;
+        max-width: calc((100% - 40px) / 2);
+
+        @include max(tablet) {
+            max-width: calc((100% - 24px) / 2);
+        }
+
+        @include max(mobile) {
+            max-width: 100%;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 16px;
+    }
+}

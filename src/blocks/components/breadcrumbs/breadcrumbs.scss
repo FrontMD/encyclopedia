@@ -5,20 +5,13 @@
 
     &__list {
         list-style-type: none;
-        display: flex;
-        gap: 2px;
         font-size: 12px;
         line-height: 1.333em;
         color: $c-accent;
-        overflow-x: auto;
-        overflow-y: hidden;
     }
 
     &__item {
-        display: flex;
-        align-items: center;
-        gap: 2px;
-        white-space: nowrap;
+        display: inline;
 
         a {
             transition: color $tr-time;

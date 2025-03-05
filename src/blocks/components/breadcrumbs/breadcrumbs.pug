@@ -7,7 +7,7 @@
                 link: 'javascript:void(0);'
             },
             {
-                name: 'Энциклопедия Забайкалья',
+                name: 'Об Энциклопедии',
                 link: 'javascript:void(0);'
             }
         ],
@@ -21,11 +21,11 @@ mixin breadcrumbs(props = defaultBreadCrumbsProps)
         }
 
     .breadcrumbs(class=checkProps.classes)
-        ul.breadcrumbs__list.scrollbar
+        ul.breadcrumbs__list
             each val, index in checkProps.items
                 li.breadcrumbs__item(class= (index === checkProps.items.length - 1) ? "breadcrumbs__item--current" : "")
                     if index === checkProps.items.length - 1
                         span= val.name
                     else
                         a(href=`${val.link}`)= val.name
-                        span.breadcrumbs__separator /
+                        span.breadcrumbs__separator!= ' /'

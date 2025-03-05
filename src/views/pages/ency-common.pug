@@ -1,0 +1,60 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Энциклопедия";
+    - const activeLinks = [2, 2]
+
+block content
+    .page-layout(data-js="pageLayout")
+        section.section.ency-common.ency
+            .section__container
+                +search-form
+            .section__container
+                +title({
+                    classes: 'ency-common__title',
+                    tag: 'h1',
+                    text: 'Энциклопедия',
+                    size: '30'
+
+                })
+                .ency-common__content
+                    .ency-common__side
+                        +title({
+                            text: 'Персоналии',
+                            size: '24'
+                        })
+                        .ency-common__list
+                            a.ency__link(href="javascript:void(0)") Альбомная серия
+                            a.ency__link(href="javascript:void(0)") Здравоохранение
+                            a.ency__link(href="javascript:void(0)") История
+                            a.ency__link(href="javascript:void(0)") Культура
+                            a.ency__link(href="javascript:void(0)") Наука и образование
+                            a.ency__link(href="javascript:void(0)") Спорт
+                            a.ency__link(href="javascript:void(0)") Средства массовой информации
+                            a.ency__link(href="javascript:void(0)") Филология
+                            a.ency__link(href="javascript:void(0)") Этнография и религия
+
+                    .ency-common__side
+                        +title({
+                            text: 'Понятия',
+                            size: '24'
+                        })
+                        .ency-common__list
+                            a.ency__link(href="javascript:void(0)") Административно-территориальное деление
+                            a.ency__link(href="javascript:void(0)") Альбомная серия
+                            a.ency__link(href="javascript:void(0)") Архитектура и строительство
+                            a.ency__link(href="javascript:void(0)") Власть и общество
+                            a.ency__link(href="javascript:void(0)") Здравоохранение
+                            a.ency__link(href="javascript:void(0)") История
+                            a.ency__link(href="javascript:void(0)") Культивируемые растения. Сельскохозяйственные животные. Ветеринария.
+                            a.ency__link(href="javascript:void(0)") Культура
+                            a.ency__link(href="javascript:void(0)") Международные связи
+                            a.ency__link(href="javascript:void(0)") Наука и образование
+                            a.ency__link(href="javascript:void(0)") Природа
+                            a.ency__link(href="javascript:void(0)") Спорт
+                            a.ency__link(href="javascript:void(0)") Средства массовой информации
+                            a.ency__link(href="javascript:void(0)") Техника и технологии
+                            a.ency__link(href="javascript:void(0)") Филология
+                            a.ency__link(href="javascript:void(0)") Экономика
+                            a.ency__link(href="javascript:void(0)") Этнография и религия

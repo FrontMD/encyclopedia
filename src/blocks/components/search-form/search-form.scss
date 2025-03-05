@@ -5,6 +5,12 @@
     background-color: $c-accent;
     background: linear-gradient(62.86deg, #007B9A -2.14%, #01BE84 76.6%, #2EED45 105.57%);
 
+    @include max(xs) {
+        margin-left: -16px;
+        margin-right: -16px;
+        width: calc(100% + 32px);
+    }
+
     &__main {
         width: 100%;
         display: flex;
@@ -60,6 +66,7 @@
         opacity: 0;
         visibility: hidden;
         transition: all $tr-time linear;
+        z-index: 15;
 
         &.active {
             opacity: 1;
@@ -92,7 +99,7 @@
         line-height: 1.5em;
         text-align: center;
         text-decoration: underline;
-        color: #77808C;
+        color: $c-text-show;
         transition: color $tr-time linear;
 
         &:hover {

@@ -24,8 +24,7 @@ block content
             color: var(--c-text);
             transition: color 0.3s linear;
             line-height: 1.02em;
-            min-height: 3.06em;
-            padding-right: 160px;
+            min-height: 2.04em;
 
             span {
                 font-size: 0.7em;
@@ -72,7 +71,7 @@ block content
             }
         }
 
-    .page-layout
+    .page-layout(data-js="pageLayout")
         section.section.pages-list
             .section__container
                 +title({
@@ -83,6 +82,10 @@ block content
 
                 .pages-list__links
                     a.pages-list__link(href="home.html" target="_blank") Главная
+                    a.pages-list__link(href="about.html" target="_blank") О проекте
                     a.pages-list__link(href="about-encyclopedia.html" target="_blank") О проекте - Об Энциклопедии
                     a.pages-list__link(href="about-small-encyclopedia.html" target="_blank") О проекте - Малая ЭЗ
                     a.pages-list__link(href="about-archeology.html" target="_blank") О проекте - Археология
+                    a.pages-list__link(href="ency-common.html" target="_blank") Энциклопедия
+                    a.pages-list__link(href="ency-section.html" target="_blank") Энциклопедия - раздел
+                    a.pages-list__link(href="ency-subsection.html" target="_blank") Энциклопедия - подраздел
