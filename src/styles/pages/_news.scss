@@ -1,12 +1,14 @@
-.about-section {
+.news-article {
     padding-top: 32px;
 
     &__title {
-        margin-top: 12px;
-
         @include max(mobile) {
             font-size: 26px;
         }
+    }
+
+    &__date {
+        margin-top: 24px;
     }
 
     &__content {

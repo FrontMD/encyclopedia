@@ -13,6 +13,10 @@
         gap: 8px;
         overflow: hidden;
         transition: max-height $tr-time linear;
+
+        @include max(mobile) {
+            margin-top: 8px;
+        }
     }
 
     &__show {

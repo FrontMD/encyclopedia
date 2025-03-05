@@ -1,0 +1,56 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Результаты поиска"
+
+block content
+	.page-layout(data-js="pageLayout")
+		section.section.search-results
+			.section__container.sidebar-layout
+				.sidebar-layout__content
+					+search-form
+
+					.search-results__content
+						.search-results__list
+							.search-results__item
+								.search-results__tag иллюстрации
+								a.search-results__title(href="javascript:void(0);") 23 апреля 2006 г. 1-й матч ФК "Чита" во 2-м дивизионе первенства России. Чита. Стадион "Локомотив". Фото Ф.Н.Машечко
+							.search-results__item
+								.search-results__tag статьи
+								a.search-results__title(href="javascript:void(0);") Чита
+							.search-results__item
+								.search-results__tag Энциклопедия
+								a.search-results__title(href="javascript:void(0);") Чита, ж.д. узел
+							.search-results__item
+								.search-results__tag Энциклопедия
+								a.search-results__title(href="javascript:void(0);") Чита, река
+							.search-results__item
+								.search-results__tag иллюстрации
+								a.search-results__title(href="javascript:void(0);") 23 апреля 2006 г. 1-й матч ФК "Чита" во 2-м дивизионе первенства России. Чита. Стадион "Локомотив". Фото Ф.Н.Машечко
+							.search-results__item
+								.search-results__tag статьи
+								a.search-results__title(href="javascript:void(0);") Чита
+							.search-results__item
+								.search-results__tag Энциклопедия
+								a.search-results__title(href="javascript:void(0);") Чита, ж.д. узел
+							.search-results__item
+								.search-results__tag Энциклопедия
+								a.search-results__title(href="javascript:void(0);") Чита, река
+							.search-results__item
+								.search-results__tag иллюстрации
+								a.search-results__title(href="javascript:void(0);") 23 апреля 2006 г. 1-й матч ФК "Чита" во 2-м дивизионе первенства России. Чита. Стадион "Локомотив". Фото Ф.Н.Машечко
+							.search-results__item
+								.search-results__tag статьи
+								a.search-results__title(href="javascript:void(0);") Чита
+							.search-results__item
+								.search-results__tag Энциклопедия
+								a.search-results__title(href="javascript:void(0);") Чита, ж.д. узел
+							.search-results__item
+								.search-results__tag Энциклопедия
+								a.search-results__title(href="javascript:void(0);") Чита, река
+
+						+pagination
+
+				.sidebar-layout__sidebar
+					+sidebar-events

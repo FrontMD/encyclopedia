@@ -34,6 +34,7 @@
     }
 
     &__link {
+        width: fit-content;
         font-weight: 400;
         font-size: 16px;
         line-height: 1.5em;
@@ -81,5 +82,54 @@
         flex-direction: column;
         gap: 8px;
         margin-top: 16px;
+    }
+}
+
+.letter-section {
+    &__content {
+        @include max(tablet) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__links {
+        columns: 3;
+        column-gap: 40px;
+
+        @include max(mobile) {
+            columns: 2;
+            column-gap: 24px;
+        }
+
+        @include max(xs) {
+            columns: auto;
+        }
+
+        .ency__link {
+            display: block;
+            line-height: 1.21em;
+            margin-bottom: 6px;
+            break-inside: avoid-column;
+        }
+    }
+}
+
+.ency-article {
+    padding-top: 32px;
+
+    &__title {
+        margin-top: 12px;
+
+        @include max(mobile) {
+            font-size: 26px;
+        }
+    }
+
+    &__content {
+        margin-top: 32px;
+
+        @include max(mobile) {
+            margin-top: 24px;
+        }
     }
 }

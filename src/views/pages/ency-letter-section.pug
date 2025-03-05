@@ -1,0 +1,101 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Энциклопедия - буква"
+    - const activeLinks = [2, 2]
+
+block content
+    .page-layout(data-js="pageLayout")
+        section.section.ency.letter-section
+            .section__container
+                +search-form
+            .section__container.sidebar-layout
+                .sidebar-layout__content
+                    +breadcrumbs({
+                        items: [
+                            {
+                                name: 'Энциклопедия',
+                                link: 'javascript:void(0);'
+                            },
+                            {
+                                name: 'Понятия',
+                                link: 'javascript:void(0);'
+                            },
+                            {
+                                name: 'Понятия на М',
+                                link: 'javascript:void(0);'
+                            },
+                        ]
+                    })
+
+                    +title({
+                        classes: 'ency__title',
+                        tag: 'h1',
+                        text: 'Понятия на М',
+                        size: '30'
+                    })
+
+                    .letter-section__content
+                        .letter-section__links
+                            a.ency__link(href="javascript:void(0)") Мадьярский перекат
+                            a.ency__link(href="javascript:void(0)") Мадьярский перекат
+                            a.ency__link(href="javascript:void(0)") Майка золотистая
+                            a.ency__link(href="javascript:void(0)") Майник двулистный
+                            a.ency__link(href="javascript:void(0)") Мак
+                            a.ency__link(href="javascript:void(0)") Макарово
+                            a.ency__link(href="javascript:void(0)") Макеевка, с.
+                            a.ency__link(href="javascript:void(0)") Маккавеево
+                            a.ency__link(href="javascript:void(0)") Маккавеевский пищекомбинат
+                            a.ency__link(href="javascript:void(0)") Малая артель
+                            a.ency__link(href="javascript:void(0)") Малая Забайкальская железная дорога
+                            a.ency__link(href="javascript:void(0)") Малая Кулинда
+                            a.ency__link(href="javascript:void(0)") Малета
+                            a.ency__link(href="javascript:void(0)") Малета, село
+                            a.ency__link(href="javascript:void(0)") Малетинское крестьянское восстание
+                            a.ency__link(href="javascript:void(0)") Малина
+                            a.ency__link(href="javascript:void(0)") Малоархангельск
+                            a.ency__link(href="javascript:void(0)") Малоковали
+                            a.ency__link(href="javascript:void(0)") Мадьярский перекат
+                            a.ency__link(href="javascript:void(0)") Мадьярский перекат
+                            a.ency__link(href="javascript:void(0)") Майка золотистая
+                            a.ency__link(href="javascript:void(0)") Майник двулистный
+                            a.ency__link(href="javascript:void(0)") Мак
+                            a.ency__link(href="javascript:void(0)") Макарово
+                            a.ency__link(href="javascript:void(0)") Макеевка, с.
+                            a.ency__link(href="javascript:void(0)") Маккавеево
+                            a.ency__link(href="javascript:void(0)") Маккавеевский пищекомбинат
+                            a.ency__link(href="javascript:void(0)") Малая артель
+                            a.ency__link(href="javascript:void(0)") Малая Забайкальская железная дорога
+                            a.ency__link(href="javascript:void(0)") Малая Кулинда
+                            a.ency__link(href="javascript:void(0)") Малета
+                            a.ency__link(href="javascript:void(0)") Малета, село
+                            a.ency__link(href="javascript:void(0)") Малетинское крестьянское восстание
+                            a.ency__link(href="javascript:void(0)") Малина
+                            a.ency__link(href="javascript:void(0)") Малоархангельск
+                            a.ency__link(href="javascript:void(0)") Малоковали
+                            a.ency__link(href="javascript:void(0)") Мадьярский перекат
+                            a.ency__link(href="javascript:void(0)") Мадьярский перекат
+                            a.ency__link(href="javascript:void(0)") Майка золотистая
+                            a.ency__link(href="javascript:void(0)") Майник двулистный
+                            a.ency__link(href="javascript:void(0)") Мак
+                            a.ency__link(href="javascript:void(0)") Макарово
+                            a.ency__link(href="javascript:void(0)") Макеевка, с.
+                            a.ency__link(href="javascript:void(0)") Маккавеево
+                            a.ency__link(href="javascript:void(0)") Маккавеевский пищекомбинат
+                            a.ency__link(href="javascript:void(0)") Малая артель
+                            a.ency__link(href="javascript:void(0)") Малая Забайкальская железная дорога
+                            a.ency__link(href="javascript:void(0)") Малая Кулинда
+                            a.ency__link(href="javascript:void(0)") Малета
+                            a.ency__link(href="javascript:void(0)") Малета, село
+                            a.ency__link(href="javascript:void(0)") Малетинское крестьянское восстание
+                            a.ency__link(href="javascript:void(0)") Малина
+                            a.ency__link(href="javascript:void(0)") Малоархангельск
+                            a.ency__link(href="javascript:void(0)") Малоковали
+
+                        +pagination
+
+                .sidebar-layout__sidebar
+                    +sidebar-ency({
+                        hasActive: true
+                    })

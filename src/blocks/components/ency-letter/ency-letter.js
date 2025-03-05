@@ -11,7 +11,7 @@ function encyLetterController() {
 
         if(itemsList.length > visibleItemsCount + 1) {
             const showMoreLayout =  `
-                                    <span class="show">Показать ${itemsList.length + visibleItemsCount}</span>
+                                    <span class="show">Показать ${itemsList.length - visibleItemsCount}</span>
                                     <span class="hide">Скрыть</span>
                                     `
             let itemsBlock = letter.querySelector('[data-js="encyLetterList"]');

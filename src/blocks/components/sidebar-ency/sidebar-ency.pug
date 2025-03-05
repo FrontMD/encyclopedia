@@ -1,12 +1,14 @@
 -
 	const defaultSidebarEncyProps = {
 		classes: '',
+		hasActive: false
 	}
 
 mixin sidebar-ency(props = defaultSidebarEncyProps)
 	-
 		const checkProps = {
 			classes: props.classes ? props.classes : defaultSidebarEncyProps.classes,
+			hasActive: props.hasActive ? props.hasActive : defaultSidebarEncyProps.hasActive,
 		}
 
 	.sidebar-ency(class=checkProps.classes)&attributes(attributes)
@@ -28,7 +30,10 @@ mixin sidebar-ency(props = defaultSidebarEncyProps)
 			a.sidebar-ency__link(href="javascript:void(0)") И
 			a.sidebar-ency__link(href="javascript:void(0)") К
 			a.sidebar-ency__link(href="javascript:void(0)") Л
-			a.sidebar-ency__link(href="javascript:void(0)") М
+			- if(checkProps.hasActive == true)
+				.sidebar-ency__link.active М
+			- else
+				a.sidebar-ency__link(href="javascript:void(0)") М 
 			a.sidebar-ency__link(href="javascript:void(0)") Н
 			a.sidebar-ency__link(href="javascript:void(0)") О
 			a.sidebar-ency__link(href="javascript:void(0)") П

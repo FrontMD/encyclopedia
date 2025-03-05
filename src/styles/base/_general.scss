@@ -246,8 +246,31 @@ table {
 		aspect-ratio: 16 / 9;
 	}
 
+	.text-editor-author {
+		margin-top: 32px;
+		margin-bottom: 32px;
+
+		&__name {
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 1.2em;
+			color: $c-accent;
+		}
+
+		&__position {
+			margin-top: 4px;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 1.4286em;
+		}
+	}
+
 	&>*:last-child {
 		margin-bottom: 0;
+	}
+
+	&>*:first-child {
+		margin-top: 0;
 	}
 }
 
