@@ -18,25 +18,16 @@ function headerController() {
         }
     }
     
-    if(burger && burgerToggleBtn) {
-        const burgerHeight = burger.scrollHeight
+    if(burger && burgerToggleBtn && window.innerWidth < 1024) {
+
         burgerToggleBtn.addEventListener('click', function() {
-            $(header).toggleClass('site-header--burger');
+            $(header).toggleClass('site-header--mob-burger');
 
-            if(window.innerWidth > 1023) {
-                if(header.classList.contains('site-header--burger')) {
-                    burger.style.maxHeight = burgerHeight + 'px';
-                } else {
-                    burger.style.maxHeight = '0px';
-                }
+            if(header.classList.contains('site-header--mob-burger')) {
+                lockBody()
             } else {
-                if(header.classList.contains('site-header--burger')) {
-                    lockBody()
-                } else {
-                    unlockBody()
-                }
+                unlockBody()
             }
-
         })
     }
 

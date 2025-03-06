@@ -41,8 +41,9 @@
     &__container {
         width: 100%;
         max-width: 1088px;
+        min-height: 56px;
         margin: 0 auto;
-        padding: 0 16px 0 0;
+        padding: 0 16px;
         display: flex;
         align-items: stretch;
         gap: 20px;
@@ -50,6 +51,7 @@
 
         @include max(tablet) {
             gap: 30px;
+            padding: 0 16px 0 0;
             border-bottom: 1px solid $c-bg-grey;
         }
     }
@@ -58,11 +60,15 @@
         width: 56px;
         height: 56px;
         align-self: center;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
         cursor: pointer;
         transition: color $tr-time linear;
+
+        @include max(tablet) {
+            display: flex;
+        }
 
         &:hover {
             color: $c-accent;
@@ -78,7 +84,7 @@
         }
     }
 
-    &--burger &__burger {
+    &--mob-burger &__burger {
         svg.open {
             display: none;
         }
@@ -154,12 +160,12 @@
 }
 
 .burger {
+    display: none;
     position: relative;
     width: 100%;
     background-color: $c-white;
     border-top: 1px solid $c-bg-grey;
     border-color: transparent;
-    max-height: 0px;
     overflow: hidden;
     transition: all $tr-time linear;
 
@@ -254,7 +260,10 @@
 
 .site-header--burger .burger {
     border-color: $c-bg-grey;
+    display: flex;
+}
 
+.site-header--mob-burger .burger {
     @include max(tablet) {
         max-height: none;
         transform: translateX(100%);

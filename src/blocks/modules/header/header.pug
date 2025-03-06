@@ -1,6 +1,6 @@
-mixin header(activeLinks = ['', ''], isBig = false)
+mixin header(activeLinks = ['', ''], isBig = false, burger = false)
 
-	header.site-header(class=`${isBig == true ? 'site-header--big' : ''}` data-js="siteHeader")
+	header.site-header(class=`${isBig == true ? 'site-header--big' : ''} ${burger == true ? 'site-header--burger' : ''}` data-js="siteHeader")
 		.site-header__top(data-js="siteHeaderTop")
 
 			a(href="javascript:void(0);")
