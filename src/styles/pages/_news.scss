@@ -9,6 +9,10 @@
 
     &__date {
         margin-top: 24px;
+        color: $c-text-grey;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.4286em;
     }
 
     &__content {

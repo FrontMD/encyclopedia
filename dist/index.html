@@ -27,6 +27,7 @@
   </head>
   <body>
         <header class="site-header" data-js="siteHeader">
+          <div class="site-header__top" data-js="siteHeaderTop"><a href="javascript:void(0);"><img src="/img/logo.svg"></a></div>
           <div class="site-header__container">
             <div class="site-header__burger" data-js="siteHeaderBurgerBtn">
               <svg class="open">
@@ -46,8 +47,31 @@
           </div>
           <div class="site-header__submenu burger" data-js="siteHeaderBurger">
             <div class="burger__container">
-              <div class="burger-menu"><a class="burger-menu__item" href="javascript:void(0);">О проекте</a><a class="burger-menu__item" href="javascript:void(0);">Энциклопедия Забайкалья</a><a class="burger-menu__item" href="javascript:void(0);">Малая ЭЗ</a><a class="burger-menu__item" href="javascript:void(0);">Библиотека ЭЗ</a><a class="burger-menu__item" href="javascript:void(0);">Альбомная серия ЭЗ</a><a class="burger-menu__item" href="javascript:void(0);">Избранные труды</a><a class="burger-menu__item" href="javascript:void(0);">Еще</a></div>
+              <div class="burger-menu active" data-js="burgerMenu">
+                <div class="burger-menu__title" data-js="burgerMenuTitle">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#arrow_expand"></use>
+                  </svg>О проекте
+                </div>
+                <div class="burger-menu__items" data-js="burgerMenuItems"><a class="burger-menu__item" href="javascript:void(0);">О проекте</a><a class="burger-menu__item" href="javascript:void(0);">Энциклопедия Забайкалья</a><a class="burger-menu__item" href="javascript:void(0);">Малая ЭЗ</a><a class="burger-menu__item" href="javascript:void(0);">Библиотека ЭЗ</a><a class="burger-menu__item" href="javascript:void(0);">Альбомная серия ЭЗ</a><a class="burger-menu__item" href="javascript:void(0);">Избранные труды</a><a class="burger-menu__item" href="javascript:void(0);">Еще</a></div>
+              </div>
+              <div class="burger-menu" data-js="burgerMenu">
+                <div class="burger-menu__title" data-js="burgerMenuTitle">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#arrow_expand"></use>
+                  </svg>Энциклопедия
+                </div>
+                <div class="burger-menu__items" data-js="burgerMenuItems"><a class="burger-menu__item" href="javascript:void(0);">Персоналии</a><a class="burger-menu__item" href="javascript:void(0);">Понятия</a></div>
+              </div>
             </div>
+            <form class="burger__search">
+              <input type="text" placeholder="Поиск">
+              <button type="submit">
+                <svg> 
+                  <use xlink:href="img/sprites/sprite.svg#search"></use>
+                </svg>
+              </button>
+            </form>
           </div>
         </header>
     <main class="site-main">

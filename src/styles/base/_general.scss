@@ -112,6 +112,10 @@ body {
 	color: $c-text;
 }
 
+body.no-scroll {
+	overflow: hidden;
+}
+
 .main {
 	flex-grow: 1;
 }
@@ -199,23 +203,6 @@ table {
 		}
 	}
 }
-
-/*.scrollbar {
-	&::-webkit-scrollbar {
-		width: 3px;
-		height: 3px;
-	}
-
-	&::-webkit-scrollbar-track {
-		background-color: $c-text-grey;
-		border-radius: 2px;
-	}
-
-	&::-webkit-scrollbar-thumb {
-		background-color: $c-bg-grey;
-		border-radius: 2px;
-	}
-}*/
 
 .text-editor {
 	font-size: 16px;
