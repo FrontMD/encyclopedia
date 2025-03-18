@@ -209,16 +209,19 @@ table {
 	line-height: 1.5em;
 	color: $c-text;
 
+	h2 {
+		font-size: 24px;
+		margin-bottom: 1em;
+		font-weight: 700;
+		line-height: 1.33em;
+	}
+
 	p {
 		margin-bottom: 1.5em;
 	}
 
 	a {
-		transition: color $tr-time linear;
-
-		&:hover {
-			color: $c-accent;
-		}
+		color: $c-accent;
 	}
 
 	img {
@@ -250,14 +253,6 @@ table {
 			font-size: 14px;
 			line-height: 1.4286em;
 		}
-	}
-
-	&>*:last-child {
-		margin-bottom: 0;
-	}
-
-	&>*:first-child {
-		margin-top: 0;
 	}
 }
 
