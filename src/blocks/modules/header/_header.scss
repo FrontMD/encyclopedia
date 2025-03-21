@@ -94,6 +94,10 @@
         }
     }
 
+    &__submenu {
+        display: none;
+    }
+
     &__logo {
         width: 147px;
         display: flex;
@@ -258,9 +262,14 @@
 
 }
 
-.site-header--burger .burger {
+.site-header--submenu .site-header__submenu {
     border-color: $c-bg-grey;
     display: flex;
+    border-top: 1px solid #efefef;
+
+    @include max(tablet) {
+        display: none;
+    }
 }
 
 .site-header--mob-burger .burger {

@@ -1,6 +1,6 @@
 mixin header(activeLinks = ['', ''], isBig = false, burger = false)
 
-	header.site-header(class=`${isBig == true ? 'site-header--big' : ''} ${burger == true ? 'site-header--burger' : ''}` data-js="siteHeader")
+	header.site-header(class=`${isBig == true ? 'site-header--big' : ''} ${burger == true ? 'site-header--submenu' : ''}` data-js="siteHeader")
 		.site-header__top(data-js="siteHeaderTop")
 
 			a(href="javascript:void(0);")
@@ -21,7 +21,23 @@ mixin header(activeLinks = ['', ''], isBig = false, burger = false)
 					li.nav-menu__item
 						a(class=`${activeLinks.length > 0 && activeLinks[0] == 2 ? 'active' : ''}` href="javascript:void(0);") Энциклопедия
 
-		.site-header__submenu.burger(data-js="siteHeaderBurger")
+		.site-header__submenu
+			.burger__container
+				.burger-menu(class=`${activeLinks.length > 0 && activeLinks[0] !== 2 ? 'active' : ''}` data-js="burgerMenu")
+					.burger-menu__items
+						a.burger-menu__item(class=`${activeLinks.length > 0 && activeLinks[1] == 1 ? 'active' : ''}` href="javascript:void(0);") О проекте
+						a.burger-menu__item(class=`${activeLinks.length > 0 && activeLinks[1] == 2 ? 'active' : ''}` href="javascript:void(0);") Энциклопедия Забайкалья
+						a.burger-menu__item(class=`${activeLinks.length > 0 && activeLinks[1] == 3 ? 'active' : ''}` href="javascript:void(0);") Малая ЭЗ
+						a.burger-menu__item(class=`${activeLinks.length > 0 && activeLinks[1] == 4 ? 'active' : ''}` href="javascript:void(0);") Библиотека ЭЗ
+						a.burger-menu__item(class=`${activeLinks.length > 0 && activeLinks[1] == 5 ? 'active' : ''}` href="javascript:void(0);") Альбомная серия ЭЗ
+						a.burger-menu__item(class=`${activeLinks.length > 0 && activeLinks[1] == 6 ? 'active' : ''}` href="javascript:void(0);") Избранные труды
+						a.burger-menu__item(class=`${activeLinks.length > 0 && activeLinks[1] == 7 ? 'active' : ''}` href="javascript:void(0);") Еще
+				.burger-menu(class=`${activeLinks.length > 0 && activeLinks[0] == 2 ? 'active' : ''}` data-js="burgerMenu")
+					.burger-menu__items
+						a.burger-menu__item(class=`${activeLinks.length > 0 && activeLinks[1] == 1 ? 'active' : ''}` href="javascript:void(0);") Персоналии
+						a.burger-menu__item(class=`${activeLinks.length > 0 && activeLinks[1] == 2 ? 'active' : ''}` href="javascript:void(0);") Понятия
+
+		.burger(data-js="siteHeaderBurger")
 			.burger__container
 				.burger-menu(class=`${activeLinks.length > 0 && activeLinks[0] !== 2 ? 'active' : ''}` data-js="burgerMenu")
 					.burger-menu__title(data-js="burgerMenuTitle")

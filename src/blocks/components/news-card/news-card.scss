@@ -11,7 +11,7 @@
 
     &__img {
         width: 100%;
-        aspect-ratio: 1 / 0.75;
+        aspect-ratio: 1 / 1;
         border-radius: 8px;
         overflow: hidden;
 
@@ -73,14 +73,13 @@
         }
 
         &--big &__content {
-            flex: 0 0 300px;
+            flex: 0 0 50%;
             background-color: #242B30;
             margin-top: 0;
             padding: 24px;
             justify-content: space-between;
 
             @include max(mobile) {
-                flex-basis: 230px;
                 padding: 16px;
             }
         }

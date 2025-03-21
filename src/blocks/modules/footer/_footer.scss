@@ -33,4 +33,10 @@
             color: $c-accent;
         }
     }
+
+    .nav-menu {
+        @include max(tablet) {
+            display: none;
+        }
+    }
 }

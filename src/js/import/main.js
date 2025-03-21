@@ -38,9 +38,6 @@ function getScrollbarWidth() {
 
 // инициализация фансибокса
 function fancyboxInit() {
-    if (typeof window.distPath == 'undefined') {
-        window.distPath = '';
-    }
     Fancybox.bind("[data-fancybox]", {
         placeFocusBack: false,
         mainClass: 'my-fancybox',
@@ -48,8 +45,8 @@ function fancyboxInit() {
         Carousel: {
             transition: "crossfade",
             Navigation: {
-                prevTpl: `<svg><use xlink:href=${window.distPath}img/sprites/sprite.svg#arrow_classic></use></svg>`,
-                nextTpl: `<svg><use xlink:href=${window.distPath}img/sprites/sprite.svg#arrow_classic></use></svg>`,
+                prevTpl: `<svg><use xlink:href=/img/sprites/sprite.svg#arrow_classic></use></svg>`,
+                nextTpl: `<svg><use xlink:href=/img/sprites/sprite.svg#arrow_classic></use></svg>`,
               },
         },
         Thumbs: {
